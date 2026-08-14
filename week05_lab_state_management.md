@@ -861,7 +861,14 @@ class HomePage extends ConsumerWidget {
 ทำโจทย์ที่ 1 และ 2 ซ้ำอีกครั้งในโปรเจกต์ทดลอง Riverpod (ส่วนที่ 4) 
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอฟีเจอร์ค้นหาที่กรองสินค้าได้ถูกต้อง และภาพ Dialog ยืนยันการล้างรายการโปรด เขียนอธิบายเหตุผลการเลือกชนิด State ของทั้งสองฟีเจอร์ ในช่องด้านล่าง
-```text
 
-
+<img width="509" height="617" alt="ภาพถ่ายหน้าจอ 2569-08-14 เวลา 16 03 39" src="https://github.com/user-attachments/assets/58026378-44a5-4d7c-9cec-7df445a4c3bb" />
+<img width="584" height="614" alt="image" src="https://github.com/user-attachments/assets/2bf8e217-b649-4da2-8fcb-072de00612d2" />
 ```
+โจทย์ 1 ช่องค้นหา ใช้ Ephemeral State
+คำค้นหาถูกใช้แค่ในหน้า Home เพื่อกรองรายการที่แสดงเองไม่มีวิดเจ็ตอื่นและไม่ต้องอยู่ข้ามหน้าจอ จึงเก็บด้วย setState ธรรมดา 
+
+โจทย์ 2 — ล้างรายการโปรด → App State
+รายการโปรด ถูกอ่าน/แก้ไขจากหลายจุดที่ไม่ใช่ parent-child กันและต้องอยู่ตลอดเลยใช้เป็น App State แบบ Provider ใช้ ref.watch ตอน build ที่ต้อง rebuild ตามค่า และ ref.read ตอนสั่งกระทำครั้งเดียวใน event handler
+```
+
