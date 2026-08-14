@@ -864,6 +864,7 @@ class HomePage extends ConsumerWidget {
 
 <img width="509" height="617" alt="ภาพถ่ายหน้าจอ 2569-08-14 เวลา 16 03 39" src="https://github.com/user-attachments/assets/58026378-44a5-4d7c-9cec-7df445a4c3bb" />
 <img width="584" height="614" alt="image" src="https://github.com/user-attachments/assets/2bf8e217-b649-4da2-8fcb-072de00612d2" />
+
 ```
 โจทย์ 1 ช่องค้นหา ใช้ Ephemeral State
 คำค้นหาถูกใช้แค่ในหน้า Home เพื่อกรองรายการที่แสดงเองไม่มีวิดเจ็ตอื่นและไม่ต้องอยู่ข้ามหน้าจอ จึงเก็บด้วย setState ธรรมดา 
