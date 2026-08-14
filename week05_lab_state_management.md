@@ -814,16 +814,17 @@ class HomePage extends ConsumerWidget {
 <img width="540" height="566" alt="ภาพถ่ายหน้าจอ 2569-08-14 เวลา 15 45 22" src="https://github.com/user-attachments/assets/58147105-a160-4ab2-8e42-9fc3b7819d6a" />
 
 > ✅ **Checkpoint 4.2** เขียนตารางเปรียบเทียบสั้น ๆ ว่าตอนแปลงจาก Provider เป็น Riverpod ต้องเปลี่ยนอะไรบ้าง (เช่น `ChangeNotifier` → `StateNotifier`, `StatelessWidget` → `ConsumerWidget`, `context.watch` → `ref.watch`) อย่างน้อย 4 คู่เทียบ
+```
 | Provider | Riverpod |
 |---|---|
-| `ChangeNotifier` | `StateNotifier<List<Item>>` |
-| `notifyListeners()` | `state = [...state, item]` |
-| `ChangeNotifierProvider` | `StateNotifierProvider` |
-| `StatelessWidget` | `ConsumerWidget` |
-| `context.watch<T>()` | `ref.watch(provider)` |
-| `context.read<T>()` | `ref.read(provider.notifier)` |
-| ครอบแอปด้วย `ChangeNotifierProvider` | ครอบแอปด้วย `ProviderScope` |
-
+| ChangeNotifier | StateNotifier<List<Item>> |
+| notifyListeners() | state = [...state, item] |
+| ChangeNotifierProvider | StateNotifierProvider |
+| StatelessWidget | ConsumerWidget |
+| context.watch<T>() | ref.watch(provider) |
+| context.read<T>() | ref.read(provider.notifier) |
+| ครอบแอปด้วย ChangeNotifierProvider | ครอบแอปด้วย ProviderScope |
+```
 ---
 
 ## ส่วนที่ 5 (ทำด้วยตนเอง): ออกแบบฟีเจอร์เพิ่มด้วยตัวเอง
